@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import Cart from "../cart/Cart";
 import Item from "../item/Item";
 import "./Cafe.css";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Cafe = () => {
     const [items, setItems] = useState([]);
@@ -20,12 +22,26 @@ const Cafe = () => {
     const handleReadTime = (readedBlog) => {
         const newMarkedBlog = [...markedBlog, readedBlog];
         setMarkBlog(newMarkedBlog);
-        // console.log(readedBlog);
     };
 
     // handle Bookmark blogs count
 
     const handleBookMarkBlogs = (bookMarkBlogs) => {
+        // check the item already exist
+        let exist = false;
+        for (const item of bookMark) {
+            if (item.id === bookMarkBlogs.id) {
+                exist = true;
+                break;
+            }
+        }
+        if (exist === true) {
+            toast.warning("You have already selected that as Bookmark", {
+                position: toast.POSITION.TOP_CENTER,
+                autoClose: 3000,
+            });
+        }
+
         const newBookMark = [...bookMark, bookMarkBlogs];
         setBookMark(newBookMark);
         // console.log(bookMark);
@@ -47,6 +63,7 @@ const Cafe = () => {
                 <Cart bookMark={bookMark} markedBlog={markedBlog}></Cart>
                 {}
             </div>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
