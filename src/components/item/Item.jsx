@@ -1,12 +1,15 @@
 import React from "react";
 import "./Item.css";
-  import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-  import { faBookmark, faCoffee } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBookmark, faCoffee } from "@fortawesome/free-solid-svg-icons";
 
 const Item = (props) => {
-    console.log(props.item);
-    const { authorimg, authorname, publishdate, readtime, blogtitle,img } =
+    // console.log(props.item.blogtitle);
+    const { authorimg, authorname, publishdate, readtime, blogtitle, img } =
         props.item;
+    const handleReadTime = props.handleReadTime;
+    const handleBookMarkBlogs = props.handleBookMarkBlogs;
+
     return (
         <div className="item-container">
             <img src={img} alt="" />
@@ -20,14 +23,20 @@ const Item = (props) => {
                 </div>
                 <div>
                     {" "}
-                    <button>
+                    <button
+                        onClick={() =>
+                            handleBookMarkBlogs(props.item.blogtitle)
+                        }
+                    >
                         {readtime} min read &nbsp;
                         <FontAwesomeIcon icon={faBookmark} />
                     </button>
                 </div>
             </div>
             <h2>{blogtitle}</h2>
-            <a href="">Mark as read</a>
+            <button onClick={() => handleReadTime(props.item)}>
+                Mark as read
+            </button>{" "}
             <hr />
         </div>
     );

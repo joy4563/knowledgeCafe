@@ -1,0 +1,16 @@
+.spent-time {
+    background: rgba(96, 71, 236, 0.1);
+    border: 1px solid #6047ec;
+    border-radius: 8px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #6047ec;
+    margin-bottom: 24px;
+}
+.bookmark-blogs {
+    background: rgba(17, 17, 17, 0.05);
+    border-radius: 8px;
+    padding: 30px;
+}
