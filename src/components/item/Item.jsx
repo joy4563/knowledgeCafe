@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 
 const Item = (props) => {
-    // console.log(props.item.blogtitle);
+    // console.log(props.item);
     const { authorimg, authorname, publishdate, readtime, blogtitle, img } =
         props.item;
     const handleReadTime = props.handleReadTime;
