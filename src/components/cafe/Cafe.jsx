@@ -7,6 +7,8 @@ const Cafe = () => {
     const [items, setItems] = useState([]);
     // state for update bookmarked blog
     const [bookMark, setBookMark] = useState([]);
+    // mark as read
+    
 
     useEffect(() => {
         fetch("items.json")
@@ -24,7 +26,7 @@ const Cafe = () => {
     const handleBookMarkBlogs = (bookMarkBlogs) => {
         const newBookMark = [...bookMark, bookMarkBlogs];
         setBookMark(newBookMark);
-        // console.log(bookMarkBlogs);
+        console.log(bookMark);
     };
 
     return (
@@ -40,8 +42,12 @@ const Cafe = () => {
                 ))}
             </div>
             <div className="cart-container">
-                <p>length: { bookMark.length}</p>
-                <Cart bookMark={bookMark}></Cart>
+                <Cart
+                    
+                    bookMark={bookMark}></Cart>
+                {
+                    
+                }
             </div>
         </div>
     );
