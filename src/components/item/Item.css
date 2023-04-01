@@ -1,0 +1,20 @@
+.item-container img{
+    height: 450px;
+    width: 845;
+}
+.profile-info {
+display: flex;
+align-items: center;
+gap: 24px;
+}
+.profile-info img{
+height: 60px;
+width: 60px;
+border-radius: 100%;
+}
+.person-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
