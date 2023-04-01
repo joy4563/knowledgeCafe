@@ -1,8 +1,10 @@
 .cafe-container {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    margin-top: 32px;
+    /* margin-left: 15%;
+    margin-right: 15%; */
 }
-
 
 .items-container {
     display: flex;
@@ -11,14 +13,15 @@
     padding: 24px;
 }
 
-@media screen and (max-width:576px){
-
+@media screen and (max-width: 576px) {
     .cafe-container {
-    display: flex;
-flex-direction: column;}
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
 
-.cart-container{
-    margin-top: 40px;
-    margin-bottom: 50px;
-}
+    .cart-container {
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
 }

@@ -1,7 +1,6 @@
 .header-style {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 32px;
     padding: 30px;
 }
 .header-style img {

@@ -11,3 +11,9 @@
     padding: 10px;
     border-radius: 10px;
 }
+.qs-title{
+    color: green;
+    text-align: center;
+    font-weight: bold;
+    font-size: x-large;
+}

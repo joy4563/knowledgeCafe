@@ -4,6 +4,7 @@ import './Question.css';
 const Question = () => {
     return (
         <div className="question">
+            <p className='qs-title'>The Question and Answer</p>
             <div className="blog-ans">
                 <p>1. Difference Between Props and State?</p>
                 <p>
