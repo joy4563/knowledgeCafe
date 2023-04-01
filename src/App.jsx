@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Cafe from "./components/cafe/Cafe";
+import Question from "./components/Question/Question";
 
 function App() {
     const [count, setCount] = useState(0);
@@ -13,7 +14,8 @@ function App() {
             <Header></Header>
 
             <hr />
-           <Cafe></Cafe>
+            <Cafe></Cafe>
+            <Question></Question>
         </div>
     );
 }

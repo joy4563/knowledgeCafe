@@ -1,9 +1,24 @@
 .cafe-container {
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2fr 1fr;
 }
 
-.cart-container {
-    position: sticky;
-    top: 0;
+
+.items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 24px;
+}
+
+@media screen and (max-width:576px){
+
+    .cafe-container {
+    display: flex;
+flex-direction: column;}
+
+.cart-container{
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
 }

@@ -17,13 +17,13 @@ const Item = (props) => {
                 <div className="profile-info">
                     <img src={authorimg} alt="" />
                     <div>
-                        <h4>{authorname}</h4>
-                        <p>{publishdate}</p>
+                        <h4 className="author-name">{authorname}</h4>
+                        <p className="publishdate">{publishdate}</p>
                     </div>
                 </div>
                 <div>
                     {" "}
-                    <p>
+                    <p className="read-time">
                         {readtime} min read &nbsp;{" "}
                         <span>
                             <button
@@ -35,8 +35,9 @@ const Item = (props) => {
                     </p>
                 </div>
             </div>
-            <h2>{blogtitle}</h2>
-            <button onClick={() => handleReadTime(props.item)}>
+            <h2 className="blog-title">{blogtitle}</h2>
+            <p className="hashtag"> #beginner #programming</p>
+            <button className="mark-button" onClick={() => handleReadTime(props.item)}>
                 Mark as read
             </button>{" "}
             <hr />

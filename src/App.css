@@ -1,6 +1,9 @@
 #root {
 }
-
+.App{
+    margin-left: 15%;
+    margin-right: 15%;
+}
 .logo {
     height: 6em;
     padding: 1.5em;
@@ -36,3 +39,5 @@
 .read-the-docs {
     color: #888;
 }
+
+

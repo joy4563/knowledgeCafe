@@ -14,12 +14,12 @@ const Cart = (props) => {
     }
     return (
         <div className="">
-            <p className="spent-time">Spent Time On Read:{times}</p>
-            <div className="bookmark-blogs">
-                <p>Bookmarked Blogs:{selectedBookMark.length}</p>{" "}
+            <p className="spent-time">Spent Time On Read: {times} min</p>
+            <div className="bookmark-blog-container">
+                <p className="blog-title">Bookmarked Blogs: {selectedBookMark.length}</p>{" "}
                 <div>
                     {selectedBookMark.map((title) => (
-                        <p>{title.blogtitle}</p>
+                        <p className="bookmarked-blog">{title.blogtitle}</p>
                     ))}
                 </div>
             </div>

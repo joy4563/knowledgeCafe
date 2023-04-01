@@ -9,8 +9,19 @@
     color: #6047ec;
     margin-bottom: 24px;
 }
-.bookmark-blogs {
+.bookmark-blog-container {
     background: rgba(17, 17, 17, 0.05);
     border-radius: 8px;
     padding: 30px;
+}
+.bookmarked-blog {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 16px;
+}
+.blog-title {
+    color: black;
+    font-weight: 700;
+    font-size: 24px;
 }
